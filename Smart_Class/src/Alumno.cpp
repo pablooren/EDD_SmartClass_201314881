@@ -16,7 +16,7 @@ alumno::alumno()
     //ctor
 }
 
-alumno::insertarA(int carnet_,int dpi_,string nombre_,string carrera_,string correo_,string pass_,int creditos_,int edad, alumno *anterior,alumno *siguiente){
+alumno::alumno(int carnet_,int dpi_,string nombre_,string carrera_,string correo_,string pass_,int creditos_,int edad_, alumno *anterior,alumno *siguiente){
 
     this->carnet=carnet_;
     this->dpi = dpi_;
@@ -25,6 +25,10 @@ alumno::insertarA(int carnet_,int dpi_,string nombre_,string carrera_,string cor
     this->correo=correo_;
     this->pass = pass_;
     this->creditos = creditos_;
+    this->edad = edad_;
+    this->anterior = anterior;
+    this->siguiente = siguiente;
+
 
 }
 

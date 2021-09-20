@@ -11,7 +11,7 @@ class alumno
     public:
         //constructores
         alumno();
-        insertarA(int carnet_,int dpi_,string nombre_,string carrera_,string correo_,string pass_,int creditos_,int edad, alumno *anterior,alumno *siguiente);
+        alumno(int carnet_,int dpi_,string nombre_,string carrera_,string correo_,string pass_,int creditos_,int edad, alumno *anterior,alumno *siguiente);
         int carnet,dpi,creditos,edad;
         string nombre,carrera,correo,pass;
         alumno *anterior,*siguiente;

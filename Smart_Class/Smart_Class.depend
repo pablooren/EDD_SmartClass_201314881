@@ -1,4 +1,21 @@
 # depslib dependency file v1.0
-1584205420 source:c:\users\pablo\documents\2021\edd\edd_smartclass_201314881\smart_class\main.cpp
+1630131259 source:c:\users\pablo\documents\2021\edd\edd_smartclass_201314881\smart_class\main.cpp
 	<iostream>
+	<stdlib.h>
+	"ListaA.h"
+
+1630125760 source:c:\users\pablo\documents\2021\edd\edd_smartclass_201314881\smart_class\src\alumno.cpp
+	"alumno.h"
+
+1630125760 c:\users\pablo\documents\2021\edd\edd_smartclass_201314881\smart_class\include\alumno.h
+	<iostream>
+	<stdlib.h>
+
+1630131013 source:c:\users\pablo\documents\2021\edd\edd_smartclass_201314881\smart_class\src\listaa.cpp
+	"ListaA.h"
+	<iostream>
+	<stdlib.h>
+
+1630131923 c:\users\pablo\documents\2021\edd\edd_smartclass_201314881\smart_class\include\listaa.h
+	"Alumno.h"
 
