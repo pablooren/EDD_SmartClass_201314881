@@ -1,0 +1,12 @@
+digraph arbol {
+n10[label= "10"];
+n5[label= "5"];
+n1[label= "1"];
+n15[label= "15"];
+n16[label= "16"];
+
+n10 -> n5
+n10 -> n15
+n5 -> n1
+n15 -> n16
+}
