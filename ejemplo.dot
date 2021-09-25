@@ -1,12 +1,22 @@
 digraph arbol {
 n10[label= "10"];
-n5[label= "5"];
+n2[label= "2"];
 n1[label= "1"];
-n15[label= "15"];
+n5[label= "5"];
+n8[label= "8"];
 n16[label= "16"];
+n15[label= "15"];
+n30[label= "30"];
+n25[label= "25"];
+n50[label= "50"];
 
-n10 -> n5
-n10 -> n15
-n5 -> n1
-n15 -> n16
+n10 -> n2
+n10 -> n16
+n2 -> n1
+n2 -> n5
+n5 -> n8
+n16 -> n15
+n16 -> n30
+n30 -> n25
+n30 -> n50
 }
