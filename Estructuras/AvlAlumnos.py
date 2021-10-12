@@ -1,5 +1,5 @@
 # las importaciones que hagan falta
-from ListaAños import ListaAño
+from Estructuras.ListaAños import ListaAño
 import os
 
 class NodoAlumno:
@@ -22,14 +22,16 @@ class AvlAlumno:
     def __init__(self) :
         self.raiz = None
     
-    def insertar(self,dato):
-        nuevo = NodoAlumno(carnet=dato)
+    def insertar(self,carnet,dpi,nombre,carrera,correo,password,creditos,edad):
+        nuevo = NodoAlumno(carnet=carnet,dpi=dpi,nombre=nombre,carrera=carrera,correo=correo,password=password,creditos=creditos,edad=edad,años=ListaAño())
         
         if self.raiz == None:
             self.raiz = nuevo
         else:
         
             self.raiz = self.nodo_insertar(nuevo,self.raiz)
+    
+    
     
     def nodo_insertar(self,nuevo,raiz_actual):
         if raiz_actual:
@@ -103,18 +105,52 @@ class AvlAlumno:
 
     def graficar(self):
         cadena = "digraph arbol {\n"
+        cadena += "node [shape = box];\n"
         if(self.raiz != None):
             cadena += self.listar(self.raiz)
             cadena += "\n"
             cadena += self.enlazar(self.raiz)
         cadena += "}"
-        Archivo = open("ejemplo.dot","w+")
+        Archivo = open("AVL_estudiantes.dot","w+")
         Archivo.write(cadena)
         Archivo.close()
+    
+    def Eliminar(self,dato,raiz_actual):
+        while raiz_actual != None:
+            if raiz_actual.carnet == dato:
+                pi = raiz_actual
+                while pi != None:
+                    pi = pi.der
+                
+                pi.der = raiz_actual.der
+                
+                
+        
+        return None
+    
+    def Buscar(self,dato,raiz_actual):
+        
+        while raiz_actual != None:
+            if raiz_actual.carnet == dato:
+                return raiz_actual
+            elif dato > raiz_actual.carnet:
+                
+                raiz_actual = raiz_actual.der
+            elif dato < raiz_actual.carnet:
+               
+                raiz_actual = raiz_actual.izq
+        
+        return None
+        
+   
+        
+        
+       
+            
 
     def listar(self, raiz_actual):
         if raiz_actual:
-            cadena = "n"+str(raiz_actual.carnet)+"[label= \""+str(raiz_actual.carnet)+"\"];\n"
+            cadena = "n"+str(raiz_actual.carnet)+"[label= \""+str(raiz_actual.carnet)+"\\n "+str(raiz_actual.nombre)+"\\n "+str(raiz_actual.carrera)+"\"];\n"
             cadena += self.listar(raiz_actual.izq)
             cadena += self.listar(raiz_actual.der)
             return cadena

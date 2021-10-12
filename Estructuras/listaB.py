@@ -1,11 +1,11 @@
 
-from NodoB import NodoB
+from Estructuras.NodoB import NodoB
 
 class Lista_NodoB:
     def __init__(self):
         self.primero = None
         self.ultimo = None
-        self.tamaño = 5
+        self.tamaño = 0
         
     def GetTamaño(self):
         return self.tamaño
@@ -24,6 +24,7 @@ class Lista_NodoB:
             self.primero = nuevo
             self.ultimo = nuevo
             self.tamaño = self.tamaño+1
+          #  print("se inserto el primer nodo de la hoja")
             
         else:
             if self.primero == self.ultimo: #es el segundo que insertamos
@@ -33,6 +34,7 @@ class Lista_NodoB:
                     self.primero.izq = nuevo.der
                     self.primero = nuevo
                     self.tamaño = self.tamaño+1
+                   # print("se inserto segundo nodo de la hoja")
                 
                 elif nuevo.codigo > self.primero.codigo:
                     self.ultimo.siguiente = nuevo
@@ -40,9 +42,11 @@ class Lista_NodoB:
                     self.ultimo.der = nuevo.izq
                     self.ultimo = nuevo
                     self.tamaño = self.tamaño+1
+                  #  print("se inserto segundo nodo de la hoja")
                 
                 else:
                     print ("ya un curso con el mismo codigo")
+                    return None
                
             else: #insertamos del 3ro en adelante
                 
@@ -52,13 +56,14 @@ class Lista_NodoB:
                     self.primero.izq = nuevo.der
                     self.primero = nuevo
                     self.tamaño = self.tamaño+1
-                    
+                                      
                 elif nuevo.codigo > self.ultimo.codigo:
                     self.ultimo.siguiente = nuevo
                     nuevo.anterior = self.ultimo
                     self.ultimo.der  = nuevo.izq
                     self.ultimo  = nuevo
                     self.tamaño = self.tamaño+1
+                    
                 
                 else :
                     pivote = self.primero
@@ -75,14 +80,16 @@ class Lista_NodoB:
                             pivote.anterior = nuevo
                             self.tamaño = self.tamaño+1
                             
+                            
                             break
                             
                         
                         elif nuevo.codigo == pivote.codigo:
                             print ("Ya hay un codigo con este curso")
+                            return None
                         else:
                             pivote = pivote.siguiente
-                            print ("pasa ahora pivote es ",pivote.codigo )
+                          #  print ("pasa ahora pivote es ",pivote.codigo )
     
     
     def recorrer(self):

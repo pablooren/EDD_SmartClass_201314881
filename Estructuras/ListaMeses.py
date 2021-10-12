@@ -1,4 +1,4 @@
-from PrincipalTareas import Matriz_ortogonal
+from Estructuras.PrincipalTareas import Matriz_ortogonal
 class NodoMes:
     def __init__(self, nombre, tareas = Matriz_ortogonal ):
         self.nombre = nombre
@@ -28,6 +28,16 @@ class ListaMes:
             self.tamaño = self.tamaño+1
     #Metodo de insercion 
     
+    
+    def Buscar(self,dato):
+        pivote = self.inicio
+        while pivote != None:
+            if dato == pivote.nombre:
+                return pivote
+            else:
+                pivote = pivote.siguiente
+
+        return None
     def Mostrar(self):
         pivote = self.inicio
         print(f"tamaño = {self.tamaño}")

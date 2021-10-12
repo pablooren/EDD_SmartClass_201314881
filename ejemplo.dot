@@ -1,22 +1,13 @@
 digraph arbol {
-n10[label= "10"];
-n2[label= "2"];
-n1[label= "1"];
-n5[label= "5"];
-n8[label= "8"];
-n16[label= "16"];
-n15[label= "15"];
-n30[label= "30"];
-n25[label= "25"];
-n50[label= "50"];
+node [shape = box];
+n201822177[label= "201822177\n Eloisa Rincón\n Ingenieria Civil"];
+n201822111[label= "201822111\n Eloisa Rincón\n Ingenieria Civil"];
+n201501786[label= "201501786\n Juan Curiel\n Ingenieria Industrial"];
+n201822144[label= "201822144\n Eloisa Rincón\n Ingenieria Civil"];
+n201901425[label= "201901425\n Emilia Miramontes\n Ingenieria en Ciencias y Sistemas"];
 
-n10 -> n2
-n10 -> n16
-n2 -> n1
-n2 -> n5
-n5 -> n8
-n16 -> n15
-n16 -> n30
-n30 -> n25
-n30 -> n50
+n201822177 -> n201822111
+n201822177 -> n201901425
+n201822111 -> n201501786
+n201822111 -> n201822144
 }

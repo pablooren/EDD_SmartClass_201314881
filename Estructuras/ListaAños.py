@@ -1,5 +1,5 @@
-from ListaMeses import ListaMes
-from ListaSemestres import ListaSemestre
+from Estructuras.ListaMeses import ListaMes
+from Estructuras.ListaSemestres import ListaSemestre
 class NodoAño:
     def __init__(self, nombre, meses = ListaMes, semestres = ListaSemestre ):
         self.nombre = nombre
@@ -16,9 +16,11 @@ class ListaAño:
         self.fin = None
         self.tamaño =0
     #creacion de la lista doble enlazada de meses
+    def tam(self):
+        return self.tamaño
     
     def insertar(self,nombre,meses, semestres):
-        nuevo = NodoAño(nombre,meses,semestres)
+        nuevo = NodoAño(nombre,meses=ListaMes(),semestres=ListaSemestre())
         if self.inicio == None:
             self.inicio = nuevo
             self.fin = nuevo
@@ -33,11 +35,18 @@ class ListaAño:
     
     def Mostrar(self):
         pivote = self.inicio
-        print(f"tamaño = {self.tamaño}")
-        
         while pivote != None:
             print(pivote.nombre," -> ", end="")
             pivote = pivote.siguiente
     #Metodo de mostrar
     
+    def Buscar(self,dato):
+        pivote = self.inicio
+        while pivote != None:
+            if dato == pivote.nombre:
+                return pivote
+            else:
+                pivote = pivote.siguiente
+
+        return None
     

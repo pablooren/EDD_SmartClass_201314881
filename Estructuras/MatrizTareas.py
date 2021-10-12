@@ -1,6 +1,6 @@
-from NodoTareas import NodoMatriz
-from NodoTareas import NodoCabecera
-from NodoTareas import NodoRaiz
+from Estructuras.NodoTareas import NodoMatriz
+from Estructuras.NodoTareas import NodoCabecera
+from Estructuras.NodoTareas import NodoRaiz
 
 
 class Matriz_ortogonal:

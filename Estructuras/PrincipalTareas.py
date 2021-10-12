@@ -1,5 +1,5 @@
-from MatrizTareas import Matriz_ortogonal
-from ListaTareas import listaT
+from Estructuras.MatrizTareas import Matriz_ortogonal
+from Estructuras.ListaTareas import listaT
 import os
 
 

@@ -1,4 +1,4 @@
-from ListaTareas import listaT
+from Estructuras.ListaTareas import listaT
 class NodoMatriz:
     def __init__(self, x = None, y = None, recordatorios = listaT,arriba=None,abajo=None,izquierda=None,derecha=None):
         self.x=x
